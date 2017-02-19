@@ -65,7 +65,8 @@ CONCURRENT_REQUESTS_PER_IP = 16
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'tutorial.pipelines.MongoPipeline': 300,
+   #'tutorial.pipelines.MongoPipeline': 300,
+   'tutorial.pipelines.JsonExporterPipeline': 400
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

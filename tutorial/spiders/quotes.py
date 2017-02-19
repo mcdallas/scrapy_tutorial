@@ -7,6 +7,10 @@ class QuotesSpider(scrapy.Spider):
         'http://quotes.toscrape.com/page/1/',
     ]
 
+    custom_settings = {
+        'EXPORT_TO': 'quotes.json',
+    }
+
     def parse(self, response):
         for quote in response.css('div.quote'):
             yield {
